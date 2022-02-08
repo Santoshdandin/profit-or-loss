@@ -6,3 +6,30 @@ label {
     display: block;
     padding-bottom: 1rem;
 }
+
+ /* footer */
+
+ footer {
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: large;
+    text-align: center;
+  }
+  
+  .footer-list {
+    margin: 10rem;
+    margin-bottom: 1rem;
+  }
+  
+  a,
+  img,
+  li {
+    display: inline;
+  }
+  
+  img {
+    width: 50px;
+    padding: 0.5rem;
+  }

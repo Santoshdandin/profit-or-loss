@@ -7,12 +7,19 @@ var outputBox = document.querySelector('#output-box');
 submitBtn.addEventListener('click', submitHandler);
 
 
+
+
 function submitHandler(){
+
     var ip = Number(initialPrice.value);
     var qty = Number(stocksQuantity.value);
     var curr = Number(currentPrice.value);
+    if(ip && qty &&curr) {
+        const result = calculateProfitAndLoss(ip, qty, curr);
     
-    calculateProfitAndLoss(ip, qty, curr);
+    } else {
+    outputBox.innerText = "Please enter all fields";
+    }
 }
 
 function calculateProfitAndLoss(initial, quantity,current) {

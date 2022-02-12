@@ -25,12 +25,12 @@ function submitHandler(){
 function calculateProfitAndLoss(initial, quantity,current) {
     if(initial > current) {
         var loss = (initial-current)*quantity;
-        var lossPercentage = ((loss/initial)*100).toFixed(2);
+        var lossPercentage = ((loss/(initial*quantity))*100).toFixed(2);
 
         showoutput('Hey the loss is ' + loss +' and the percentage is ' + lossPercentage + '%');
     } else if(current > initial){
         var profit = (current - initial)*quantity;
-        var profitPercentage =((profit/initial)*100).toFixed(2);
+        var profitPercentage =((profit/(initial*quantity))*100).toFixed(2);
         
         showoutput('Hey the profit is ' + profit +' and the percentage is ' + profitPercentage + '%');
     } else {
